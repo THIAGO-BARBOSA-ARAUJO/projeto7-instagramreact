@@ -1,9 +1,8 @@
-import ReactDOOM from 'react-dom'
-import NavBar from './navbar'
-function App(){
-    return(
-        <NavBar/>
-    )
-}
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
 
-ReactDOOM.render(<App/>, document.querySelector('.root'))
+
+ReactDOM.render(<App/>, document.querySelector('.root'))
+
+

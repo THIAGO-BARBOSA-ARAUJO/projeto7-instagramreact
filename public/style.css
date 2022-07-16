@@ -191,6 +191,10 @@ body {
   font-size: 24px;
 }
 
+ion-icon[name="heart"]{
+  color: red;
+}
+
 .post .fundo .acoes div:first-child ion-icon {
   margin-right: 6px;
 }
