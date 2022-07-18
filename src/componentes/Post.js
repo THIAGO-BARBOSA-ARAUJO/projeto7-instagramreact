@@ -17,7 +17,7 @@ export default function Post(props) {
             <div className="conteudo">
                 {props.data.isVideo 
                     ? <video muted loop autoPlay src={props.data.post}></video>
-                    : <img src={props.data.post} alt="lalalala" />
+                    : <img onDoubleClick={()=>setCurtida(!curtida)} src={props.data.post} alt="lalalala" />
                 }
             </div>
 
