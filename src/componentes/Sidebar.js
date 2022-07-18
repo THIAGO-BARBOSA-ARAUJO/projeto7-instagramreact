@@ -22,31 +22,31 @@ export default function SideBar() {
     ]
 
     return (
-        <div class="sidebar">
-            <div class="usuario">
+        <div className="sidebar">
+            <div className="usuario">
                 <img src="img/catanacomics.svg" alt="lalalalalala" />
-                <div class="texto">
+                <div className="texto">
                     <strong>catanacomics</strong>
                     Catana
                 </div>
             </div>
 
-            <div class="sugestoes">
-                <div class="titulo">
+            <div className="sugestoes">
+                <div className="titulo">
                     Sugestões para você
                     <div>Ver tudo</div>
                 </div>
 
-                {sidebarObg.map(data => (<SidebarSugestao img={data.img} nome={data.nome}/>))}
+                {sidebarObg.map((data, i) => (<SidebarSugestao key={i} img={data.img} nome={data.nome}/>))}
                 
                 
             </div>
 
-            <div class="links">
+            <div className="links">
                 Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos • Localizações • Contas mais relevantes • Hashtags • Idioma
             </div>
 
-            <div class="copyright">
+            <div className="copyright">
                 © 2021 INSTAGRAM DO FACEBOOK
             </div>
         </div>

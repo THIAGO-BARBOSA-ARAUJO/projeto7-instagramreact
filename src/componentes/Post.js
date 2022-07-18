@@ -3,27 +3,31 @@ import React from "react"
 export default function Post(props) {
     const [curtida, setCurtida] = React.useState(false)
   return (
-        <div class="post">
-            <div class="topo">
-                <div class="usuario">
+        <div className="post">
+            <div className="topo">
+                <div className="usuario">
                     <img src={props.data.imgUsuario} />
                     {props.data.nomeUsuario}
                 </div>
-                <div class="acoes">
+                <div className="acoes">
                     <ion-icon name="ellipsis-horizontal"></ion-icon>
                 </div>
             </div>
 
-            <div class="conteudo">
-                <img src={props.data.imgPost} alt="lalalala" />
+            <div className="conteudo">
+                {props.data.isVideo 
+                    ? <video muted loop autoPlay src={props.data.post}></video>
+                    : <img src={props.data.post} alt="lalalala" />
+                }
             </div>
 
-            <div class="fundo">
-                <div class="acoes">
+            <div className="fundo">
+                <div className="acoes">
                     <div>
                         {curtida 
                             ? <ion-icon onClick={()=>setCurtida(!curtida)} name="heart"></ion-icon> 
-                            : <ion-icon onClick={()=>setCurtida(!curtida)} name="heart-outline"></ion-icon>}
+                            : <ion-icon onClick={()=>setCurtida(!curtida)} name="heart-outline"></ion-icon>
+                        }
                         
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         
@@ -34,9 +38,9 @@ export default function Post(props) {
                     </div>
                 </div>
 
-                <div class="curtidas">
+                <div className="curtidas">
                     <img src={props.data.imgCurtiu} alt="lalalala" />
-                    <div class="texto">
+                    <div className="texto">
                         Curtido por <strong>{props.data.nomeCurtiu}</strong> e <strong>outras {props.data.qtdLikes} pessoas</strong>
                     </div>
                 </div>
